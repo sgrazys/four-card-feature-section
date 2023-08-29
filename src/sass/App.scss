@@ -1,0 +1,40 @@
+:root {
+	// COLORS
+
+	// Priamry
+	--color-primary-red: #ea5353;
+	--color-primary-cyna: #45d3d3;
+	--color-primary-orange: #fcaf4a;
+	--color-primary-blue: #549ef2;
+
+	// Gray
+	--color-gray-dark: #4c4e61;
+	--color-gray: #a3a5ae;
+	--color-gray-light: #fafafa;
+
+	//Font Family
+	--font-primary: 'Poppins', sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+}
+body,
+body *,
+body *::after,
+body *::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--font-primary);
+	font-size: 1.5rem;
+	line-height: 1;
+}
+
+h1 {
+	background-color: purple;
+}
