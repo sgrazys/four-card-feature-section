@@ -4,6 +4,7 @@ import IconTeamBuilder from './img/icon-team-builder.svg';
 import IconKarma from './img/icon-karma.svg';
 import IconCalculator from './img/icon-calculator.svg';
 import Card from './components/Card';
+import Footer from './components/Footer';
 
 const features = [
 	{
@@ -36,25 +37,31 @@ const features = [
 
 function App() {
 	return (
-		<section className='section'>
-			<header className='header'>
-				<h2 className='header__subheading'>
-					Reliable, efficient delivery
-				</h2>
-				<h1 className='header__heading'>Powered by Technology</h1>
-				<p className='header__description'>
-					Our Artificial Intelligence powered tools use millions of
-					project data points to ensure that your project is
-					successful
-				</p>
-			</header>
+		<>
+			<section className='section'>
+				<header className='header'>
+					<h2 className='header__subheading'>
+						Reliable, efficient delivery
+					</h2>
+					<h1 className='header__heading'>Powered by Technology</h1>
+					<p className='header__description'>
+						Our Artificial Intelligence powered tools use millions
+						of project data points to ensure that your project is
+						successful
+					</p>
+				</header>
 
-			<ul className='features-list'>
-				{features.map((feature) => (
-					<Card feature={feature} />
-				))}
-			</ul>
-		</section>
+				<ul className='features-list'>
+					{features.map((feature) => (
+						<Card
+							feature={feature}
+							key={feature.title}
+						/>
+					))}
+				</ul>
+			</section>
+			<Footer />
+		</>
 	);
 }
 

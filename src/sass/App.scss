@@ -32,18 +32,19 @@ body *::before {
 body {
 	font-family: var(--font-primary);
 	font-size: 1.5rem;
-
+	color: var(--color-gray);
 	background-color: var(--color-gray-light);
 	padding: 8.5rem 3.2rem;
 }
 
 .section {
 	display: grid;
-	width: 100%;
-	max-width: 800px;
+	justify-content: center;
+	justify-items: center;
 
 	.header {
 		text-align: center;
+		max-width: 600px;
 		&__subheading {
 			font-size: 2.4rem;
 			font-weight: 200;
@@ -74,10 +75,43 @@ body {
 
 		.card {
 			background-color: #fff;
-			// box-shadow: 0 3rem 1.5rem rgba(#0a7fe5a3, 0.2);
-			border-radius: 1rem;
+			border-radius: 0.7rem;
+			box-shadow: 0 1.2rem 1.5rem rgba(#0d4687, 0.1);
+			overflow: hidden;
+			max-width: 500px;
 
-			padding: 2.8rem;
+			&__container {
+				display: flex;
+				flex-direction: column;
+				padding: 2.8rem;
+			}
+
+			&__title {
+				font-size: 2rem;
+				font-weight: 600;
+				color: var(--color-gray-dark);
+			}
+			&__description {
+				font-size: 1.3rem;
+				letter-spacing: 0.09px;
+				line-height: 1.77;
+				margin-bottom: 2.358em;
+			}
+
+			&__icon {
+				width: 5.7rem;
+				height: 5.7rem;
+				align-self: flex-end;
+			}
 		}
 	}
+}
+
+.attribution {
+	font-size: 1.1rem;
+	text-align: center;
+	padding-top: 6.272em;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
 }
