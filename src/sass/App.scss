@@ -66,4 +66,18 @@ body {
 			margin-bottom: 5.066em;
 		}
 	}
+
+	.features-list {
+		list-style: none;
+		display: grid;
+		grid-row-gap: 2.5rem;
+
+		.card {
+			background-color: #fff;
+			// box-shadow: 0 3rem 1.5rem rgba(#0a7fe5a3, 0.2);
+			border-radius: 1rem;
+
+			padding: 2.8rem;
+		}
+	}
 }
