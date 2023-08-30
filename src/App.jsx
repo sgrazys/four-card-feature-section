@@ -3,6 +3,7 @@ import IconSupervisor from './img/icon-supervisor.svg';
 import IconTeamBuilder from './img/icon-team-builder.svg';
 import IconKarma from './img/icon-karma.svg';
 import IconCalculator from './img/icon-calculator.svg';
+import Card from './components/Card';
 
 const features = [
 	{
@@ -15,7 +16,7 @@ const features = [
 		title: 'Team Builder',
 		description:
 			'Scans our talent network to create the optimal team for your project',
-		icon: IconSupervisor,
+		icon: IconTeamBuilder,
 		color: '#FF637B',
 	},
 	{
@@ -48,9 +49,11 @@ function App() {
 				</p>
 			</header>
 
-			<div className='features'>
-				<ul className='features__list'></ul>
-			</div>
+			<ul className='features-list'>
+				{features.map((feature) => (
+					<Card feature={feature} />
+				))}
+			</ul>
 		</section>
 	);
 }
