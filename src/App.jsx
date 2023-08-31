@@ -60,8 +60,8 @@ function App() {
 						/>
 					))}
 				</ul>
-				<Footer />
 			</section>
+			<Footer />
 		</>
 	);
 }
