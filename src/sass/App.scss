@@ -35,21 +35,29 @@ body {
 	color: var(--color-gray);
 	background-color: var(--color-gray-light);
 	padding: 8.5rem 3.2rem;
+
+	@media only screen and (min-width: 79.06em) {
+		padding: 8rem 16.5rem;
+	}
 }
 
 .section {
 	display: grid;
-	justify-content: center;
 	justify-items: center;
 
 	.header {
 		text-align: center;
-		max-width: 600px;
+		max-width: 540px;
+
 		&__subheading {
 			font-size: 2.4rem;
 			font-weight: 200;
 			letter-spacing: 0.17px;
 			color: var(--color-gray-dark);
+			@media only screen and (min-width: 79.06em) {
+				font-size: 3.6rem;
+				letter-spacing: 0.25px;
+			}
 		}
 
 		&__heading {
@@ -58,6 +66,10 @@ body {
 			letter-spacing: 0.17px;
 			color: var(--color-gray-dark);
 			margin-bottom: 0.666em;
+			@media only screen and (min-width: 79.06em) {
+				font-size: 3.6rem;
+				font-weight: 600;
+			}
 		}
 
 		&__description {
@@ -73,6 +85,13 @@ body {
 		display: grid;
 		grid-row-gap: 2.5rem;
 
+		@media only screen and (min-width: 79.06em) {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			align-items: center;
+			grid-column-gap: 2.5rem;
+		}
+
 		.card {
 			background-color: #fff;
 			border-radius: 0.7rem;
@@ -80,28 +99,57 @@ body {
 			overflow: hidden;
 			max-width: 500px;
 
+			@media only screen and (min-width: 79.06em) {
+				max-width: 350px;
+
+				&__1 {
+					grid-row: 1 / 3;
+				}
+
+				&__3 {
+					grid-column: 2;
+				}
+				&__4 {
+					grid-row: 1 / 3;
+					grid-column: 3;
+				}
+			}
+
 			&__container {
 				display: flex;
 				flex-direction: column;
 				padding: 2.8rem;
+				@media only screen and (min-width: 79.065em) {
+					padding: 3.2rem;
+				}
 			}
 
 			&__title {
 				font-size: 2rem;
 				font-weight: 600;
 				color: var(--color-gray-dark);
+				@media only screen and (min-width: 79.065em) {
+					margin-bottom: 0.3em;
+				}
 			}
 			&__description {
 				font-size: 1.3rem;
 				letter-spacing: 0.09px;
 				line-height: 1.77;
 				margin-bottom: 2.358em;
+				@media only screen and (min-width: 79.065em) {
+					margin-bottom: 3.076em;
+				}
 			}
 
 			&__icon {
 				width: 5.7rem;
 				height: 5.7rem;
 				align-self: flex-end;
+				@media only screen and (min-width: 79.065em) {
+					width: 6.4rem;
+					height: 6.4rem;
+				}
 			}
 		}
 	}
@@ -110,7 +158,7 @@ body {
 .attribution {
 	font-size: 1.1rem;
 	text-align: center;
-	padding-top: 6.272em;
+	padding-top: 2em;
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);

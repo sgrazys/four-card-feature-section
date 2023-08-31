@@ -1,6 +1,6 @@
-function Card({ feature }) {
+function Card({ feature, index }) {
 	return (
-		<li className='card'>
+		<li className={`card card__${index + 1}`}>
 			<div
 				className='card__container'
 				style={{ borderTop: `3.55px solid ${feature.color}` }}

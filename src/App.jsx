@@ -52,15 +52,16 @@ function App() {
 				</header>
 
 				<ul className='features-list'>
-					{features.map((feature) => (
+					{features.map((feature, i) => (
 						<Card
 							feature={feature}
 							key={feature.title}
+							index={i}
 						/>
 					))}
 				</ul>
+				<Footer />
 			</section>
-			<Footer />
 		</>
 	);
 }
